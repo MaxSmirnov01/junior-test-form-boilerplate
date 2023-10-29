@@ -1,4 +1,4 @@
-import { ImageList } from './components';
+import { Form, ImageList } from './components';
 
 function App() {
   return (
@@ -8,6 +8,8 @@ function App() {
       </header>
       <main>
         <section>
+          <Form />
+          <hr style={{ border: '1px solid #ccc' }}></hr>
           <ImageList />
         </section>
       </main>
