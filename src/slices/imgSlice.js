@@ -5,7 +5,7 @@ import formattedDate from '../formattedDate';
 
 const imgSlice = createSlice({
   name: 'img',
-  initialState: { images: [], errors: {} },
+  initialState: { images: [], error: {} },
   reducers: {
     addImage: (state, { payload }) => {
       state.images.push(payload);
@@ -29,9 +29,9 @@ const imgSlice = createSlice({
 
         state.images = newState;
       })
-      .addCase(getData.rejected, (state, { error }) => {
-        console.log(error);
-        state.errors = error;
+      .addCase(getData.rejected, (state, { payload }) => {
+        console.log(payload);
+        state.error = payload;
       });
   },
 });

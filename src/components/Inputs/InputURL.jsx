@@ -1,5 +1,5 @@
 import Error from '../Error/Error';
-import request from '../../requests';
+import request from '../../api/requests';
 
 import { InputWrapper, LabelWrapper } from './styles';
 
